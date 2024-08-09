@@ -5,4 +5,9 @@ We see three critical differences between programming and software engineering: 
 Within Google, we sometimes say, “Software engineering is programming integrated over time.” Programming is certainly a significant part of software engineering: after all, programming is how you generate new software in the first place. If you accept this distinction, it also becomes clear that we might need to delineate between programming tasks (development) and software engineering tasks (development, modification, maintenance). The addition of time adds an important new dimension to programming. Cubes aren’t squares, distance isn’t velocity. Software engineering isn’t programming.
 
 ### Comentário 
-Engenheiros de software devem se preocupar em criar códigos que atendam as necessidades atuais e prever as necessidades futuras de um problema, levando em consideração as limitações da ferramenta ou plataforma utilizadas, dessa maneira criando códigos com a capacidade de serem atualizados conforme o escopo do projeto de modifica. 
+Engenheiros de software devem se preocupar em criar códigos que atendam as necessidades atuais e prever as necessidades futuras de um problema, levando em consideração as limitações da ferramenta ou plataforma utilizadas, dessa maneira criando códigos com a capacidade de serem atualizados conforme o escopo do projeto de modifica.
+Sendo assim engenharia de software é programação levando em consideração as perdas e os ganhos das opções disponeveis, principalmente em relação a requisitos não funcionais.
+
+Comparação de requisitos não funcionais (trade-offs) de 2 sistemas operacionais:
+As vantagens e desvantagens do MacOS estão atrelados ao fato de que a Apple controla todos os seus produtos tanto o hardware quanto software, devido a isso seu desmpenho é melhor ja que o software não precisa se preocupar com a compatibilidade com o hardware, outra caracteristica é a segurança
+Windowns
