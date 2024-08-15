@@ -6,8 +6,9 @@ Within Google, we sometimes say, “Software engineering is programming integrat
 
 ### Comentário 
 Engenheiros de software devem se preocupar em criar códigos que atendam as necessidades atuais e prever as necessidades futuras de um problema, levando em consideração as limitações da ferramenta ou plataforma utilizadas, dessa maneira criando códigos com a capacidade de serem atualizados conforme o escopo do projeto de modifica.
-Sendo assim engenharia de software é programação levando em consideração as perdas e os ganhos das opções disponeveis, principalmente em relação a requisitos não funcionais.
+Sendo assim, engenharia de software é programação levando em consideração as perdas e os ganhos das opções disponeveis, principalmente em relação a requisitos não funcionais.
 
-Comparação de requisitos não funcionais (trade-offs) de 2 sistemas operacionais:
-As vantagens e desvantagens do MacOS estão atrelados ao fato de que a Apple controla todos os seus produtos tanto o hardware quanto software, devido a isso seu desmpenho é melhor ja que o software não precisa se preocupar com a compatibilidade com o hardware, outra caracteristica é a segurança
-Windowns
+#### Comparação de requisitos não funcionais (trade-offs) de 3 sistemas operacionais:
+- As vantagens do MacOS estão atreladas ao fato de que o hardware da Apple está muito bem integrado ao sistema operacional, dessa maneira ele é mais optimizado e tem melhor desempenho. Porém, devido a isso, ele é menos flexível no quesito de personalização e é menos compatível com dispositivos não Apple.
+- O Windows é compatível com uma vasta gama de hardwares e softwares, já que a maioria dos aplicativos comerciais e profissionais são desenvolvidos especificamente para Windows, contudo é menos eficiente já que roda vários serviços em segundo plano e também demanda um hardware mais potente.
+- Já o Linux é geralmente mais eficiente e pode ser configurado para rodar em hardwares menos potentes, uma vez que ele pode ser amplamente customizado para atender às necessidades do usuário, porém ele demanda mais conhecimento técnico para operação e manutenção.
