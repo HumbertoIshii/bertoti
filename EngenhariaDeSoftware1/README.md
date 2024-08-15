@@ -12,3 +12,6 @@ Sendo assim, engenharia de software é programação levando em consideração a
 - As vantagens do MacOS estão atreladas ao fato de que o hardware da Apple está muito bem integrado ao sistema operacional, dessa maneira ele é mais optimizado e tem melhor desempenho. Porém, devido a isso, ele é menos flexível no quesito de personalização e é menos compatível com dispositivos não Apple.
 - O Windows é compatível com uma vasta gama de hardwares e softwares, já que a maioria dos aplicativos comerciais e profissionais são desenvolvidos especificamente para Windows, contudo é menos eficiente já que roda vários serviços em segundo plano e também demanda um hardware mais potente.
 - Já o Linux é geralmente mais eficiente e pode ser configurado para rodar em hardwares menos potentes, uma vez que ele pode ser amplamente customizado para atender às necessidades do usuário, porém ele demanda mais conhecimento técnico para operação e manutenção.
+
+#### Analise arquitetura Airbnb
+https://blog.bytebytego.com/p/a-brief-history-of-airbnbs-architecture?utm_source=publication-search
