@@ -30,3 +30,93 @@ Dessa forma tornando o sistema mais confiável e agora sendo escalável, uma vez
 ![Airbnb 3](https://github.com/user-attachments/assets/c7af5638-d1fd-4356-a2d2-3e6b87e7cd36)
 
 Fonte: https://blog.bytebytego.com/p/a-brief-history-of-airbnbs-architecture?utm_source=publication-search
+
+
+
+## Diagrama UML
+Foi desenvolvido um diagrama UML para um sistema de rolagem de dados em RPG de mesa. Este ajuda a visualizar a interação entre as classes e os métodos envolvidos, facilitando a compreensão e a implementação do sistema.
+![Diagrama](https://github.com/user-attachments/assets/66757ada-8d4f-4eaf-8817-5077192fb2fc)
+
+### Classe Dice 
+A classe Dice define a quantidade de lados do dado e possui métodos para gerar resultados aleatórios baseados nesses lados.
+```
+import java.util.Random;
+
+public class Dice {
+    private int diceFaces;
+
+    public Dice(int diceFaces) {
+        this.diceFaces = diceFaces;
+    }
+
+    public void setDiceFaces(int diceFaces) {
+        this.diceFaces = diceFaces;
+    }
+
+    public int rollDice(){
+        Random roll = new Random();
+        int number = roll.nextInt(diceFaces);
+        number += 1;
+        return number;
+    }
+}
+```
+
+### Classe Action
+A classe Action gerencia a rolagem de múltiplos dados e modificadores de dano, agregando os resultados conforme necessário. Ela possui um método que retorna uma string contendo o nome da ação e o dano final causado.
+```
+public class Action {
+    private String actionName;
+    private Dice diceUsed;
+    private int numberOfDices;
+    private int bonusToRoll;
+
+    public Action(String actionName, Dice diceUsed, int numberOfDices, int bonusToRoll) {
+        this.actionName = actionName;
+        this.diceUsed = diceUsed;
+        this.numberOfDices = numberOfDices;
+        this.bonusToRoll = bonusToRoll;
+    }
+
+    public void setActionName(String actionName) {
+        this.actionName = actionName;
+    }
+
+    public void setDiceUsed(Dice diceUsed) {
+        this.diceUsed = diceUsed;
+    }
+
+    public void setNumberOfDices(int numberOfDices) {
+        this.numberOfDices = numberOfDices;
+    }
+
+    public void setBonusToRoll(int bonusToRoll) {
+        this.bonusToRoll = bonusToRoll;
+    }
+
+    public String actionRoll(){
+        int temp;
+        String text;
+        temp = 0;
+        for(int i = 0; i < numberOfDices; i++){
+            temp += diceUsed.rollDice();
+        }
+        temp += bonusToRoll;
+        text = this.actionName + " deals " + temp + " points of damage!";
+        return text;
+    }
+}
+```
+### Classe Main
+A classe Main configura valores e instâncias para testar o programa de rolagem de dados.
+```
+public class Main {
+    public static void main(String[] args) {
+        Dice d6 = new Dice(6);
+        Action fireBolt = new Action("Fire Bolt",d6,2,4);
+
+        System.out.println(d6.rollDice());
+        System.out.println(fireBolt.actionRoll());
+    }
+}
+```
