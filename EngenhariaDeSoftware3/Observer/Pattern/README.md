@@ -22,7 +22,40 @@ Ele promove um **baixo acoplamento** entre os objetos que emitem eventos (sujeit
 
 ### Diagrama UML
 
-![Diagrama UML do Observer Pattern](./observer-pattern.png)
+```mermaid
+classDiagram
+    %% Interfaces
+    class Observer {
+        <<interface>>
+        +update(message: String)
+    }
+
+    class Subject {
+        <<interface>>
+        +addObserver(observer: Observer)
+        +removeObserver(observer: Observer)
+        +notifyObservers(message: String)
+    }
+
+    %% Classes concretas
+    class User {
+        -name: String
+        +User(name: String)
+        +update(message: String)
+    }
+
+    class NotificationService {
+        -observers: List~Observer~
+        +addObserver(observer: Observer)
+        +removeObserver(observer: Observer)
+        +notifyObservers(message: String)
+    }
+
+    %% Relacionamentos
+    Observer <|.. User
+    Subject <|.. NotificationService
+    NotificationService *--> Observer
+```
 
 ### Código
 
