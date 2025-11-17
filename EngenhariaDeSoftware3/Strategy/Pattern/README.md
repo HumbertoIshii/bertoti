@@ -25,7 +25,36 @@ O **Strategy Pattern** é um padrão de projeto comportamental que permite defin
 
 ### Diagrama UML
 
-![Diagrama UML do Strategy Pattern](./strategy_uml.png)
+```mermaid
+classDiagram
+    class Main {
+        +main()
+    }
+
+    class PaymentProcessor {
+        -strategy
+        +PaymentProcessor()
+        +processPayment()
+        +setStrategy()
+    }
+
+    class PaymentStrategy {
+        +pay()
+    }
+
+    class CreditCardPayment {
+        +pay()
+    }
+
+    class PayPalPayment {
+        +pay()
+    }
+
+    Main --> PaymentProcessor
+    PaymentProcessor *--> PaymentStrategy
+    PaymentStrategy <|.. CreditCardPayment
+    PaymentStrategy <|.. PayPalPayment
+```
 
 ### Código
 
